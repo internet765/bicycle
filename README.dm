@@ -20,4 +20,4 @@
 HTML, CSS, SCSS, БЭМ, Java Script, Parcel.
 
 
-Ссылка на рабочую версию: https://ngagara.github.io/bicycles
+Ссылка на рабочую версию: https://ngagara.github.io/bicycle
