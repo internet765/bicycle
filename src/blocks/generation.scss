@@ -1,0 +1,10 @@
+.generation {
+  background-color: rgb(247, 247, 247);
+  padding: 120px 0;
+  @media (max-width: 900px) {
+    padding: 80px 0;
+  }
+  @media (max-width: 600px) {
+    padding: 30px 0;
+  }
+}

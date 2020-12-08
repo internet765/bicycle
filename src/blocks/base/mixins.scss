@@ -1,0 +1,22 @@
+@mixin img($url: false) {
+  @if ($url) {
+    background-image: url($url);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  } @else {
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@mixin repeatGrid($numColumn: 0, $sizeColumn: 0, $numRow: 0, $sizeRow: 0) {
+  display: grid;
+  grid-template-columns: repeat($numColumn, $sizeColumn);
+  grid-template-rows: repeat($numRow, $sizeRow);
+}
+
+@mixin tr($tx, $ty) {
+  transform: translate($tx, $ty);
+}

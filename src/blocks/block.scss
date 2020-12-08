@@ -1,0 +1,35 @@
+.block {
+  text-align: center;
+  &__icon {
+    margin: 0 0 30px 0;
+  }
+  &__title {
+    font-size: 18px;
+    color: rgb(53, 55, 56);
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0 0 18px 0;
+    &_span {
+      font-weight: 300;
+      color: rgb(132, 135, 137);
+    }
+  }
+  &__text {
+    font-size: 18px;
+    color: rgb(132, 135, 137);
+    line-height: 1.889;
+    &_j {
+      text-align: justify;
+      font-size: 16px;
+      line-height: 30px;
+      &:after {
+        content: "";
+        width: 50px;
+        height: 1px;
+        background-color: rgb(40, 47, 53);
+        display: block;
+        margin: 35px auto 0 auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.brands {
+  &_rev {
+    .brands__column {
+      order: 1;
+      &_b {
+        order: 2;
+      }
+    }
+  }
+  &__row {
+    display: flex;
+  }
+  &__column {
+    flex: 0 1 33.333%;
+    &_b {
+      flex: 0 1 66.667%;
+    }
+  }
+  &__item {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(39, 158, 112, 0.5);
+        z-index: 1;
+      }
+    }
+    &_bcompany {
+      @include img("./images/Layer.jpg");
+    }
+    &_vintage {
+      @include img("./images/Layer3.jpg");
+    }
+    &_bicycles {
+      @include img("./images/Layer5.jpg");
+    }
+  }
+  &__logo {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    padding: 70px 55px 65px 55px;
+    position: relative;
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      margin: 0 0 0 -10px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid rgba(247, 247, 247);
+    }
+  }
+
+  &__image {
+    padding: 0 0 37% 0;
+    width: 100%;
+    &_bcompany {
+      @include img("./images/Layer2.jpg");
+    }
+    &_vintage {
+      @include img("./images/Layer4.jpg");
+    }
+    &_bicycles {
+      @include img("./images/Layer6.jpg");
+    }
+    &_bicycles-s {
+      height: 100%;
+      padding: 50%;
+      @include img("./images/Layer7.jpg");
+    }
+  }
+
+  @media (max-width: 1500px) {
+    &__content {
+      padding: 40px 35px 35px 35px;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    &_last {
+      .brands__column {
+        &:nth-child(1) {
+          order: 2;
+        }
+        &:nth-child(2) {
+          order: 1;
+        }
+        &:nth-child(3) {
+          order: 3;
+        }
+      }
+    }
+    &__row {
+      flex-direction: column;
+    }
+    &__item {
+      padding: 20%;
+    }
+  }
+}

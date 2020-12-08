@@ -1,0 +1,130 @@
+.shop {
+  &__body {
+    @include repeatGrid(
+      $numColumn: 6,
+      $sizeColumn: 1fr,
+      $numRow: 2,
+      $sizeRow: 1fr
+    );
+    grid-template-areas:
+      "shop_1 shop_2 shop_4 shop_5 shop_6 shop_6"
+      "shop_3 shop_3 shop_4 shop_5 shop_7 shop_8";
+  }
+
+  &__link {
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(39, 158, 112, 0.5);
+        z-index: 1;
+      }
+      .shop__shop-now {
+        z-index: 2;
+        visibility: visible;
+      }
+    }
+    &_1 {
+      grid-area: shop_1;
+    }
+
+    &_2 {
+      grid-area: shop_2;
+    }
+
+    &_3 {
+      grid-area: shop_3;
+    }
+
+    &_4 {
+      grid-area: shop_4;
+    }
+
+    &_5 {
+      grid-area: shop_5;
+    }
+
+    &_6 {
+      grid-area: shop_6;
+    }
+
+    &_7 {
+      grid-area: shop_7;
+    }
+
+    &_8 {
+      grid-area: shop_8;
+    }
+  }
+
+  &__shop-now {
+    visibility: hidden;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include tr(-50%, -50%);
+  }
+
+  &__text {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__image {
+    @include img($url: false);
+    width: 100%;
+    height: 100%;
+  }
+
+  &__footer {
+    background-color: rgb(40, 47, 53);
+    padding: 75px 0;
+    text-align: center;
+  }
+
+  &__btn {
+    display: inline-block;
+    height: 50px;
+    line-height: 48px;
+    letter-spacing: 2.8;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    padding: 0 60px;
+    border: 1px solid rgb(255, 255, 255, 0.5);
+  }
+
+  @media (max-width: 1100px) {
+    &__body {
+      @include repeatGrid(
+        $numColumn: 2,
+        $sizeColumn: 1fr,
+        $numRow: 6,
+        $sizeRow: 1fr
+      );
+      grid-template-areas:
+        "shop_1 shop_2"
+        "shop_3 shop_3"
+        "shop_4 shop_5"
+        "shop_4 shop_5"
+        "shop_6 shop_6"
+        "shop_7 shop_8";
+    }
+    &__btn {
+      padding: 0 30px;
+    }
+    &__footer {
+      padding: 50px 0;
+    }
+  }
+}

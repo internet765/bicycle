@@ -1,0 +1,22 @@
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 200;
+  left: 0;
+  top: 35px;
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85px;
+  }
+  &__logo {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    @include tr(-50%, 0px);
+  }
+  @media (max-width: 767px) {
+    top: 30px;
+}
+}

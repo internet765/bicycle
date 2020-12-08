@@ -1,0 +1,24 @@
+.slider {
+  background-color: rgb(247, 247, 247);
+  padding: 120px 0 100px 0;
+  &__container {
+    min-height: 250px;
+  }
+  .swiper-pagination-bullet-active {
+    background: rgb(53, 55, 56);
+  }
+  @media (max-width: 1025px) {
+    padding: 100px 15px 100px 15px;
+  }
+
+  @media (max-width: 769px) {
+    padding: 60px 20px 60px 20px;
+  }
+
+  @media (max-width: 425px) {
+    &__container {
+      min-height: 350px;
+    }
+    padding: 40px 35px 35px 35px;
+  }
+}

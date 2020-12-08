@@ -1,0 +1,92 @@
+.subscribe {
+  background-color: rgb(255, 255, 255);
+  &__body {
+    padding: 110px 0;
+    max-width: 534px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 24px;
+    color: rgb(132, 135, 137);
+    font-style: italic;
+    line-height: 1.417;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  &__form {
+    display: flex;
+    position: relative;
+  }
+
+  &__input {
+    flex: 1 1 auto;
+    width: 100%;
+    height: 69px;
+    background-color: #ffffff;
+    border: 1px solid #d3d7d9;
+    margin-right: 8px;
+    padding-left: 28px;
+    font-size: 20px;
+    font-style: italic;
+    color: #929292;
+
+    &:focus {
+      border: 2px solid #d3d7d9;
+    }
+    &:valid:not(:placeholder-shown) {
+      border-color: rgb(100, 194, 158);
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: rgb(196, 54, 54);
+    }
+
+    &:invalid:not(:placeholder-shown) + .subscribe__error {
+      display: block;
+    }
+  }
+
+  &__error {
+    display: none;
+    position: absolute;
+    font-size: 16px;
+    bottom: -20px;
+    left: 5;
+    color: rgb(196, 54, 54);
+  }
+
+  &__button {
+    flex: 1 1 126px;
+    height: 69px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    line-height: 69px;
+    text-align: center;
+    background-color: rgb(100, 194, 158);
+  }
+
+  @media (max-width: 750px) {
+    &__body {
+      padding: 60px 0;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__form {
+      display: block;
+    }
+    &__input {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+  }
+}
